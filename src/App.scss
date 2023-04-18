@@ -13,12 +13,21 @@
   justify-content: center;
   height: 100vh;
 
+
   .app-content {
     width: 800px;
     display: flex;
-    box-shadow: 40px 40px 40px 40px rgba(201, 213, 225, 0.503415), ;
+    box-shadow: 40px 40px 40px 40px rgba(201, 213, 225, 0.503415) ;
     border-radius: 10px;
     height: 325px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 375px;
+      box-shadow: none;
+    }
 
     .app-content--img {
       height: 100%;
@@ -28,6 +37,11 @@
         height: 100%;
         object-fit: cover;
         border-radius: 10px 0 0 10px;
+
+        @include mobile {
+          width: 350px;
+          border-radius: 10px 10px 0 0;
+        }
       }
     }
 
@@ -40,12 +54,21 @@
       border-radius: 0 10px 10px;
       position: relative;
 
-      .info-text {
+      @include mobile {
+        width: 350px;
+        border-radius: 0 0px 10px 10px;
+        padding: 2rem;
+      }
 
+      .info-text {
         display: flex;
         flex-direction: column;
         gap: .5rem;
         width: 95%;
+
+        @include mobile {
+          gap: 1rem;
+        }
 
         .info-h1 {
           font: $manrope-b;
@@ -59,11 +82,14 @@
         }
       }
 
-
       .info-profile {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include mobile {
+          margin-top: 3rem;
+        }
 
         .info-profile--user {
           display: flex;
@@ -100,6 +126,11 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          z-index: 2;
+
+          @include mobile {
+            width: 50px;
+          }
 
           &.activated {
             background-color: $desaturated-dark-blue;
@@ -125,6 +156,17 @@
           bottom: 95px;
           border-radius: 10px;
           box-shadow: 10px 10px 10px rgba(201, 213, 225, 0.503415);
+
+          @include mobile {
+            width: 100%;
+            height: 10vh;
+            bottom: 0px;
+            left: 0;
+            border-radius: 0 0 10px 10px;
+            padding: 3.2rem 2rem;
+            display: flex;
+            align-items: center;
+          }
 
           .social-container--title {
             font: $manrope-m;
