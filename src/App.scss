@@ -5,3 +5,106 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.App {
+  background-color: $light-grayish-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .app-content {
+    width: 800px;
+    display: flex;
+    box-shadow: 40px 40px 40px 40px rgba(201, 213, 225, 0.503415), ;
+    border-radius: 10px;
+    height: 280px;
+
+    .app-content--img {
+      height: 100%;
+
+      img {
+        width: 285px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+      }
+    }
+
+    .app-content--info {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #fff;
+      border-radius: 0 10px 10px;
+
+      .info-text {
+
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        width: 90%;
+
+        .info-h1 {
+          font: $manrope-b;
+          font-size: 1.25rem;
+          color: $very-dark-grayish-blue;
+        }
+  
+        .info-p {
+          font: $manrope-m;
+          color: $desaturated-dark-blue;
+        }
+      }
+
+
+      .info-profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .info-profile--user {
+          display: flex;
+          gap: .5rem;
+
+          .info-profile--avatar {
+            width: 15%;
+            border-radius: 50%;
+          }
+
+          .info-profile--username {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .username {
+              font: $manrope-b;
+              color: $very-dark-grayish-blue;
+              line-height: 1;
+            }
+
+            .date {
+              font: $manrope-m;
+              color: $desaturated-dark-blue;
+            }
+          }
+        }
+
+        .info-profile--share {
+          width: 40px;
+          height: 40px;
+          background-color: #ecf2f8;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .image-share {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
