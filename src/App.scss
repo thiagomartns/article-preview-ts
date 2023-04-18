@@ -38,6 +38,7 @@
       justify-content: space-around;
       background-color: #fff;
       border-radius: 0 10px 10px;
+      position: relative;
 
       .info-text {
 
@@ -100,6 +101,10 @@
           align-items: center;
           justify-content: center;
 
+          &.activated {
+            background-color: $desaturated-dark-blue;
+          }
+
           &:hover {
             background-color: $desaturated-dark-blue;
             cursor: pointer;
@@ -107,6 +112,34 @@
 
           &:hover path {
             fill: white;
+          }
+        }
+
+        .social-container {
+          padding: 1rem 2rem;
+          background-color: $very-dark-grayish-blue;
+          display: flex;
+          gap: 1rem;
+          position: absolute;
+          right: -55px;
+          bottom: 95px;
+          border-radius: 10px;
+          box-shadow: 10px 10px 10px rgba(201, 213, 225, 0.503415);
+
+          .social-container--title {
+            font: $manrope-m;
+            color: $light-grayish-blue;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+          }
+
+          .social-container--networks {
+            display: flex;
+            gap: .75rem;
+
+            .social-icon:hover {
+              cursor: pointer;
+            }
           }
         }
       }
