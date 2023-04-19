@@ -18,3 +18,8 @@ $light-grayish-blue: hsl(210, 46%, 95%);
   }
 }
 
+// animation
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

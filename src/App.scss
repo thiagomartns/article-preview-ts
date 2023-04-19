@@ -79,6 +79,10 @@
         .info-p {
           font: $manrope-m;
           color: $desaturated-dark-blue;
+
+          @include mobile {
+          margin-bottom: 1rem;
+        }
         }
       }
 
@@ -156,6 +160,7 @@
           bottom: 95px;
           border-radius: 10px;
           box-shadow: 10px 10px 10px rgba(201, 213, 225, 0.503415);
+          animation: fade-in 1s ease-in-out;
 
           @include mobile {
             width: 100%;
