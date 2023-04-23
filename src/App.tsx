@@ -1,7 +1,7 @@
 import './App.scss';
-import Drawers from './assets/img/drawers.jpg'
 import { useState } from 'react';
 import TextComponent from './components/textComponent/TextComponent';
+import ImageComponent from './components/imageComponent/ImageComponent';
 
 function App() {
   const [showSocialMedia, setShowSocialMedia] = useState<boolean>(false);
@@ -13,9 +13,7 @@ function App() {
   return (
     <div className="App">
       <div className="app-content">
-        <div className="app-content--img">
-          <img src={Drawers} alt="" />
-        </div>
+        <ImageComponent />
         <TextComponent  
           showSocialMedia={showSocialMedia}
           handleClick={handleClick}
